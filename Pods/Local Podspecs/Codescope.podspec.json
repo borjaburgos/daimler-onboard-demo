@@ -1,6 +1,6 @@
 {
   "name": "Codescope",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "summary": "CodeScope agent for iOS",
   "description": "CodeScope gives engineering teams unprecedented visibility into their CI process to quickly identify, troubleshoot and fix failed builds",
   "homepage": "https://codescope.com",
@@ -12,11 +12,11 @@
     "Fernando Mayo": "fernando@codescope.com"
   },
   "platforms": {
-    "ios": "12.0"
+    "ios": "9.0"
   },
   "source": {
     "git": "https://github.com/yoonitio/ios-agent.git",
-    "tag": "0.1.2"
+    "tag": "0.1.3"
   },
   "source_files": "Agent/Agent",
   "frameworks": "XCTest"

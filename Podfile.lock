@@ -1,22 +1,22 @@
 PODS:
-  - Codescope (0.1.2)
+  - Codescope (0.1.3)
 
 DEPENDENCIES:
-  - Codescope (from `https://github.com/yoonitio/ios-agent.git`, tag `0.1.2`)
+  - Codescope (from `https://github.com/yoonitio/ios-agent.git`, tag `0.1.3`)
 
 EXTERNAL SOURCES:
   Codescope:
     :git: https://github.com/yoonitio/ios-agent.git
-    :tag: 0.1.2
+    :tag: 0.1.3
 
 CHECKOUT OPTIONS:
   Codescope:
     :git: https://github.com/yoonitio/ios-agent.git
-    :tag: 0.1.2
+    :tag: 0.1.3
 
 SPEC CHECKSUMS:
-  Codescope: 13e632f60bbc478e50747eae762212c7a4d53e16
+  Codescope: 0fd528b8b1675ca14534cd8a6bc78d196b50cfd4
 
-PODFILE CHECKSUM: be0231a84c1f6bd09b850fd4b3e85792efbc1e0a
+PODFILE CHECKSUM: 1df6c1c489fda13070e8f441bc6f6f1bdeae0c4d
 
 COCOAPODS: 1.5.3
