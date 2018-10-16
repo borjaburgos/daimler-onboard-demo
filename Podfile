@@ -6,12 +6,12 @@ target 'DemoSwift' do
 
   target 'DemoSwiftTests' do
     inherit! :search_paths
-    pod 'Codescope', :git => "https://github.com/yoonitio/ios-agent.git", :tag => "0.1.3"
+    pod 'Codescope', :git => "https://github.com/yoonitio/ios-agent.git", :tag => "0.1.4"
   end
 
   target 'DemoSwiftUITests' do
     inherit! :search_paths
-    pod 'Codescope', :git => "https://github.com/yoonitio/ios-agent.git", :tag => "0.1.3"
+    pod 'Codescope', :git => "https://github.com/yoonitio/ios-agent.git", :tag => "0.1.4"
   end
 
 end

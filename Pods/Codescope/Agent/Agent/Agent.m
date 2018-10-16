@@ -8,17 +8,46 @@
 
 #import "Agent.h"
 
+
+void uncaughtExceptionHandler(NSException *exception) {
+    [[Agent sharedAgent] exceptionHandler: exception];
+}
+
+
 @implementation Agent
+
++ (id)sharedAgent {
+    static Agent *sharedAgent = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedAgent = [[self alloc] init];
+    });
+    return sharedAgent;
+}
 
 + (void)load
 {
-    Agent *agent = [[Agent alloc] init];
-    [[XCTestObservationCenter sharedTestObservationCenter] addTestObserver:agent];
+    [[Agent sharedAgent] install];
 }
 
-- (void)testCaseDidFinish:(XCTestCase *)testCase
+- (void)install
 {
-    os_log(OS_LOG_DEFAULT, "Codescope: %@ finished!", testCase.name);
+    if(!self.installed) {
+        // Instrument testing framework
+        TestObserver *obs = [[TestObserver alloc] init];
+        [obs install];
+        
+        // Catch unhandled exceptions
+        NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+        
+        // Mark agent as installed
+        self.installed = YES;
+    }
+}
+
+- (void)exceptionHandler:(NSException *)exception
+{
+    os_log(OS_LOG_DEFAULT, "Codescope: exception unhandled: %@", exception);
 }
 
 @end
