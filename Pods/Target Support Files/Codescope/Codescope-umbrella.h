@@ -11,8 +11,8 @@
 #endif
 
 #import "Agent.h"
+#import "Log.h"
 #import "TestObserver.h"
-#import "XCTestCase+PatchedTestCase.h"
 
 FOUNDATION_EXPORT double CodescopeVersionNumber;
 FOUNDATION_EXPORT const unsigned char CodescopeVersionString[];

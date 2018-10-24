@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
-#import <os/log.h>
-#import "XCTestCase+PatchedTestCase.h"
+#import "Agent.h"
+#import "Aspects/Aspects.h"
 
-@interface TestObserver : NSObject <XCTestObservation, TestExceptionHandler>
 
-- (void)install;
+@interface TestObserver : NSObject <XCTestObservation>
+@property id agent;
+
+- (void)install:(id)agent;
 - (void)testCase:(XCTestCase *)testCase didThrowException:(NSException *)exception;
 
 @end

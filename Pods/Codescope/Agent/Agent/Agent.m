@@ -9,45 +9,38 @@
 #import "Agent.h"
 
 
-void uncaughtExceptionHandler(NSException *exception) {
-    [[Agent sharedAgent] exceptionHandler: exception];
-}
-
-
 @implementation Agent
 
-+ (id)sharedAgent {
++ (void)load {
+    [[Agent sharedAgent] install];
+}
+
++ (Agent *)sharedAgent {
     static Agent *sharedAgent = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedAgent = [[self alloc] init];
+        sharedAgent.sharedKSCrash = [KSCrashInstallationConsole sharedInstance];
     });
     return sharedAgent;
 }
 
-+ (void)load
-{
-    [[Agent sharedAgent] install];
-}
-
-- (void)install
-{
-    if(!self.installed) {
-        // Instrument testing framework
+- (void)install {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         TestObserver *obs = [[TestObserver alloc] init];
-        [obs install];
+        [obs install:self];
         
-        // Catch unhandled exceptions
-        NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-        
-        // Mark agent as installed
-        self.installed = YES;
-    }
+        [self.sharedKSCrash install];
+    });
 }
 
-- (void)exceptionHandler:(NSException *)exception
-{
-    os_log(OS_LOG_DEFAULT, "Codescope: exception unhandled: %@", exception);
+- (void)loggingHandler:(NSString *)message inFile:(NSString *)file inLine:(int)line inFunction:(NSString *)function {
+    fprintf(stderr, "Codescope: intercepted logs: %s:%3d %s: %s\n", [file UTF8String], line, [function UTF8String], [message UTF8String]);
+}
+
+- (void)exceptionHandler:(NSException *)exception {
+    [KSCrash.sharedInstance reportUserException:exception.name reason:exception.reason language:nil lineOfCode:nil stackTrace:exception.callStackSymbols logAllThreads:FALSE terminateProgram:FALSE];
 }
 
 @end

@@ -7,16 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <os/log.h>
 #import <objc/runtime.h>
 #import "TestObserver.h"
+#import "Log.h"
+#import <KSCrash/KSCrash.h>
+#import <KSCrash/KSCrashInstallationConsole.h>
 
 @interface Agent : NSObject
-@property BOOL installed;
+@property KSCrashInstallationConsole *sharedKSCrash;
 
-+ (id)sharedAgent;
-+ (void)load;
++ (Agent *)sharedAgent;
 - (void)install;
 - (void)exceptionHandler:(NSException *)exception;
+- (void)loggingHandler:(NSString *)message inFile:(NSString *)file inLine:(int)line inFunction:(NSString *)function;
 
 @end

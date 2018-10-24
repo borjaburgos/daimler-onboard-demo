@@ -1,22 +1,94 @@
 PODS:
-  - Codescope (0.1.4)
+  - Aspects (1.4.1)
+  - Codescope (0.1.5):
+    - Aspects
+    - KSCrash
+  - KSCrash (1.15.18):
+    - KSCrash/Installations (= 1.15.18)
+  - KSCrash/Installations (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting
+  - KSCrash/Recording (1.15.18):
+    - KSCrash/Recording/Tools (= 1.15.18)
+  - KSCrash/Recording/Tools (1.15.18)
+  - KSCrash/Reporting (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters (= 1.15.18)
+    - KSCrash/Reporting/MessageUI (= 1.15.18)
+    - KSCrash/Reporting/Sinks (= 1.15.18)
+    - KSCrash/Reporting/Tools (= 1.15.18)
+  - KSCrash/Reporting/Filters (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Alert (= 1.15.18)
+    - KSCrash/Reporting/Filters/AppleFmt (= 1.15.18)
+    - KSCrash/Reporting/Filters/Base (= 1.15.18)
+    - KSCrash/Reporting/Filters/Basic (= 1.15.18)
+    - KSCrash/Reporting/Filters/GZip (= 1.15.18)
+    - KSCrash/Reporting/Filters/JSON (= 1.15.18)
+    - KSCrash/Reporting/Filters/Sets (= 1.15.18)
+    - KSCrash/Reporting/Filters/Stringify (= 1.15.18)
+    - KSCrash/Reporting/Filters/Tools (= 1.15.18)
+  - KSCrash/Reporting/Filters/Alert (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/AppleFmt (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/Base (1.15.18):
+    - KSCrash/Recording
+  - KSCrash/Reporting/Filters/Basic (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/GZip (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/JSON (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/Sets (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/AppleFmt
+    - KSCrash/Reporting/Filters/Base
+    - KSCrash/Reporting/Filters/Basic
+    - KSCrash/Reporting/Filters/GZip
+    - KSCrash/Reporting/Filters/JSON
+    - KSCrash/Reporting/Filters/Stringify
+  - KSCrash/Reporting/Filters/Stringify (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/Tools (1.15.18):
+    - KSCrash/Recording
+  - KSCrash/Reporting/MessageUI (1.15.18):
+    - KSCrash/Recording
+  - KSCrash/Reporting/Sinks (1.15.18):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters
+    - KSCrash/Reporting/Tools
+  - KSCrash/Reporting/Tools (1.15.18):
+    - KSCrash/Recording
 
 DEPENDENCIES:
-  - Codescope (from `https://github.com/yoonitio/ios-agent.git`, tag `0.1.4`)
+  - Codescope (from `https://github.com/yoonitio/ios-agent.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Aspects
+    - KSCrash
 
 EXTERNAL SOURCES:
   Codescope:
     :git: https://github.com/yoonitio/ios-agent.git
-    :tag: 0.1.4
 
 CHECKOUT OPTIONS:
   Codescope:
+    :commit: 3df1c8fd1fe47a412fde5ede82e5f700083d14e0
     :git: https://github.com/yoonitio/ios-agent.git
-    :tag: 0.1.4
 
 SPEC CHECKSUMS:
-  Codescope: f596fa5169bc44ca2c76f8671b3fe2a7e8453fb9
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  Codescope: 7d1b95f1989903986a59d9fb6e4d5ef8e5606015
+  KSCrash: 5394936f41e5c1ef7b79cf79b30d53299b0c160e
 
-PODFILE CHECKSUM: 80d859a07c3adce2e60de299c82ddb0f7fa59cba
+PODFILE CHECKSUM: 06d878598477fc3f785e5057adfeb1e2155831a6
 
 COCOAPODS: 1.5.3
