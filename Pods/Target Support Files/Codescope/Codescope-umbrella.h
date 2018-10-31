@@ -10,9 +10,18 @@
 #endif
 #endif
 
-#import "Agent.h"
-#import "Log.h"
-#import "TestObserver.h"
+#import "CSAgent.h"
+#import "CSLogPipe.h"
+#import "CSSpan.h"
+#import "CSSpanContext.h"
+#import "CSTags.h"
+#import "CSTestObserver.h"
+#import "CSTracer.h"
+#import "CSUtil.h"
+#import "KSCrashInstallationCodeScope.h"
+#import "KSCrashReportSinkCodeScope.h"
+#import "NSData+CSGzip.h"
+#import "NSDate+ISO8601.h"
 
 FOUNDATION_EXPORT double CodescopeVersionNumber;
 FOUNDATION_EXPORT const unsigned char CodescopeVersionString[];

@@ -26,6 +26,9 @@
     ],
     "KSCrash": [
 
+    ],
+    "opentracing": [
+
     ]
   }
 }

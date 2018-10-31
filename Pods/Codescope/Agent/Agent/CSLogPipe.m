@@ -1,23 +1,16 @@
 //
-//  Log.m
+//  CSLogPipe.m
 //  Agent
 //
 //  Created by Fernando Mayo on 19/10/2018.
 //  Copyright © 2018 Codescope. All rights reserved.
 //
 
-#import "Log.h"
+#import "CSLogPipe.h"
 
-static Log *sharedLog = nil;
+static CSLogPipe *sharedLog = nil;
 
-@implementation Log
-
-+ (void)load
-{
-    sharedLog = [[self alloc] init];
-    [sharedLog redirectStdout];
-    [sharedLog redirectStderr];
-}
+@implementation CSLogPipe
 
 - (void)redirectStdout
 {

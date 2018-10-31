@@ -1,5 +1,5 @@
 //
-//  TestObserver.h
+//  CSTestObserver.h
 //  Agent
 //
 //  Created by Fernando Mayo Fernandez on 10/15/18.
@@ -8,14 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
-#import "Agent.h"
-#import "Aspects/Aspects.h"
+#import "CSSpan.h"
 
 
-@interface TestObserver : NSObject <XCTestObservation>
-@property id agent;
+@interface CSTestObserver : NSObject <XCTestObservation>
+@property(atomic) CSSpan *activeSpan;
 
-- (void)install:(id)agent;
 - (void)testCase:(XCTestCase *)testCase didThrowException:(NSException *)exception;
 
 @end

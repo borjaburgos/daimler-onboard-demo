@@ -1,5 +1,5 @@
 //
-//  Log.h
+//  CSLogPipe.h
 //  Agent
 //
 //  Created by Fernando Mayo on 19/10/2018.
@@ -10,7 +10,7 @@
 #import <unistd.h>
 
 
-@interface Log : NSObject
+@interface CSLogPipe : NSObject
 @property NSPipe *stdoutPipe;
 @property NSPipe *stderrPipe;
 @end
