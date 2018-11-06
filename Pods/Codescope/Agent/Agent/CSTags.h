@@ -61,6 +61,7 @@
 #define CSTAG_EVENT_LOG "log"
 #define CSTAG_LOG_LOGGER "log.logger"
 #define CSTAG_LOG_LEVEL "log.level"
+#define CSTAG_LOG_SOURCE "source"
 
 // Baggage tags
 #define CSTAG_TRACE_KIND "trace.kind"

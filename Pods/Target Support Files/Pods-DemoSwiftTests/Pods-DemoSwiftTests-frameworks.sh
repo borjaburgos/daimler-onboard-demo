@@ -143,12 +143,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Codescope/Codescope.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KSCrash/KSCrash.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/opentracing/opentracing.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Codescope/Codescope.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KSCrash/KSCrash.framework"

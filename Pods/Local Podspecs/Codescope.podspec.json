@@ -12,13 +12,14 @@
     "Fernando Mayo": "fernando@codescope.com"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
   "source": {
     "git": "https://github.com/yoonitio/ios-agent.git",
     "tag": "0.1.5"
   },
   "source_files": "Agent/Agent",
+  "requires_arc": true,
   "frameworks": "XCTest",
   "dependencies": {
     "Aspects": [
@@ -30,5 +31,22 @@
     "opentracing": [
 
     ]
-  }
+  },
+  "default_subspecs": "Lite",
+  "subspecs": [
+    {
+      "name": "Lite"
+    },
+    {
+      "name": "CocoaLumberjack",
+      "xcconfig": {
+        "OTHER_CFLAGS": "$(inherited) -DCS_COCOALUMBERJACK_ENABLED"
+      },
+      "dependencies": {
+        "CocoaLumberjack/Swift": [
+
+        ]
+      }
+    }
+  ]
 }

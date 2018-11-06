@@ -60,16 +60,6 @@
       </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "GIT_COMMIT"
-            value = "$(GIT_COMMIT)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GIT_URL"
-            value = "$(GIT_URL)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
             key = "CODESCOPE_APIKEY"
             value = "$(CODESCOPE_APIKEY)"
             isEnabled = "YES">

@@ -7,9 +7,10 @@
 //
 
 import XCTest
-import Codescope
 import os.log
+import CocoaLumberjack
 
+let ddloglevel = DDLogLevel.debug;
 
 @testable import DemoSwift
 
@@ -35,6 +36,7 @@ class DemoSwiftTests: XCTestCase {
     }
     
     func testLogging() {
+        DDLogDebug("Hello world!");
         NSLog("Hello %@", "world!");
         os_log("Hello %@", "world!");
     }

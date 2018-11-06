@@ -7,14 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <objc/runtime.h>
 #import "KSCrash/KSCrash.h"
 #import "KSCrashInstallationCodeScope.h"
 #import "CSTestObserver.h"
 #import "CSLogPipe.h"
 #import "CSTracer.h"
+#import "CSCocoaLumberjackLogger.h"
 
-#define CSAGENT_VERSION @"0.1.0"
+#define CSAGENT_VERSION "0.1.0"
+#if DEBUG
+#define CSLog(fmt, ...) NSLog(@"[CodeScope] " fmt, ##__VA_ARGS__)
+#else
+#define CSLog(...)
+#endif
 
 @class CSTestObserver;
 
@@ -25,12 +30,12 @@
 @property (readonly) NSString *repository;
 @property (readonly) NSString *commit;
 @property (readonly) NSString *service;
+@property (readonly) NSString *sourceRoot;
 @property KSCrashInstallationCodeScope *sharedKSCrash;
 @property CSTestObserver *testObserver;
 @property CSTracer *tracer;
 @property (class) CSAgent *sharedAgent;
 
 - (void)install;
-- (void)loggingHandler:(NSString *)message inFile:(NSString *)file inLine:(int)line inFunction:(NSString *)function;
 
 @end

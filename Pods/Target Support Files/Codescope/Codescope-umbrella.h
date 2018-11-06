@@ -11,6 +11,7 @@
 #endif
 
 #import "CSAgent.h"
+#import "CSCocoaLumberjackLogger.h"
 #import "CSLogPipe.h"
 #import "CSSpan.h"
 #import "CSSpanContext.h"

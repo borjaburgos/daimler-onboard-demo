@@ -62,9 +62,9 @@ static NSRegularExpression *regex;
 - (void)testCase:(XCTestCase *)testCase didFailWithDescription:(NSString *)description inFile:(NSString *)filePath atLine:(NSUInteger)lineNumber
 {
     [self.activeSpan log:@{
-                           @"event": @"test_failure",
-                           @"message": description,
-                           @"source": [NSString stringWithFormat:@"%@:%lu", filePath, (unsigned long)lineNumber],
+                           @CSTAG_EVENT: @"test_failure",
+                           @CSTAG_MESSAGE: description,
+                           @CSTAG_LOG_SOURCE: [NSString stringWithFormat:@"%@:%lu", filePath, (unsigned long)lineNumber],
                            @CSTAG_LOG_LEVEL: @"ERROR",
                            }];
 }

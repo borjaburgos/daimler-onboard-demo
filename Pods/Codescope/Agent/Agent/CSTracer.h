@@ -76,6 +76,8 @@ extern NSInteger const CSBackgroundTaskError;
 /// Tracer's access token
 @property(atomic, strong, readonly) NSString *apiKey;
 
+@property(atomic, strong, readonly) NSMutableArray<CSSpan *> *activeSpanStack;
+
 /// Record a span.
 - (void)_appendSpanJSON:(NSDictionary *)spanRecord;
 

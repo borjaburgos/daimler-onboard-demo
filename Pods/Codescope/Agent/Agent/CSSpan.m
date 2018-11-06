@@ -69,6 +69,8 @@
         _context = [[CSSpanContext alloc] initWithTraceId:traceId spanId:spanId baggage:parent.baggage];
         
         [self addTags:tags];
+        
+        [_tracer.activeSpanStack addObject:self];
     }
     return self;
 }
@@ -120,6 +122,7 @@
         spanJSON = [self _toJSONWithFinishTime:finishTime];
     }
     [self.tracer _appendSpanJSON:spanJSON];
+    [self.tracer.activeSpanStack removeObject:self];
     for (CSLog *l in self.logs) {
         NSDictionary *eventJSON = [l toJSON];
         [eventJSON setValue:[self.context toJSON] forKey:@"context"];

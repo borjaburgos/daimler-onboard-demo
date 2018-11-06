@@ -49,6 +49,7 @@ NSString *const CSErrorDomain = @"com.codescope";
         _lastFlush = [NSDate date];
         _baseURL = baseURL;
         _metadata = metadata;
+        _activeSpanStack = [NSMutableArray<CSSpan *> array];
         [self _forkFlushLoop:flushIntervalSeconds];
     }
     return self;
