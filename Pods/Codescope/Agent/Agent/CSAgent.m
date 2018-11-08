@@ -12,6 +12,7 @@
 #import "CSTags.h"
 
 
+static NSString *const CSDefaultBaseURLString = @"https://api.codescope.com";
 static NSString *const CSDefaultServiceString = @"default";
 static NSString *const CSDefaultSourceRoot = @"/";
 
@@ -31,10 +32,7 @@ static CSAgent *_sharedAgent = nil;
 
     NSString *baseURL = [environment valueForKey:@"CODESCOPE_API_ENDPOINT"];
     if([baseURL length] == 0) {
-        CSLog(@"Warning: no API endpoint detected - aborting CodeScope agent installation");
-        return;
-    } else {
-        CSLog(@"Autodetected base URL: %@", baseURL);
+        baseURL = CSDefaultBaseURLString;
     }
 
     NSString *commit = [environment valueForKey:@"CODESCOPE_COMMIT_SHA"];

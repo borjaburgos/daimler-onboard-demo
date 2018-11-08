@@ -84,8 +84,8 @@ PODS:
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift
-  - Codescope (from `https://github.com/undefinedlabs/ios-agent.git`, branch `logger`)
-  - Codescope/CocoaLumberjack (from `https://github.com/undefinedlabs/ios-agent.git`, branch `logger`)
+  - Codescope (from `https://github.com/undefinedlabs/ios-agent.git`)
+  - Codescope/CocoaLumberjack (from `https://github.com/undefinedlabs/ios-agent.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -96,12 +96,11 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Codescope:
-    :branch: logger
     :git: https://github.com/undefinedlabs/ios-agent.git
 
 CHECKOUT OPTIONS:
   Codescope:
-    :commit: cbb19901e3938e77ddf1b5ba782e7341cb3fe555
+    :commit: cdfc5439aeca8561aee14a0aa79198af0488e4da
     :git: https://github.com/undefinedlabs/ios-agent.git
 
 SPEC CHECKSUMS:
@@ -111,6 +110,6 @@ SPEC CHECKSUMS:
   KSCrash: 5394936f41e5c1ef7b79cf79b30d53299b0c160e
   opentracing: 2c1a1076e2ab26f56189b02dcb1e72cf0b297917
 
-PODFILE CHECKSUM: ed93a9a3b4975c20a0b5eace0ef342a9c8d1badd
+PODFILE CHECKSUM: 288f78014ef368e84eacbf462bb1f7e2dab089f3
 
 COCOAPODS: 1.5.3
