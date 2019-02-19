@@ -7,14 +7,14 @@ target 'DemoSwift' do
 
   target 'DemoSwiftTests' do
     inherit! :search_paths
-    pod 'Codescope', :git => "https://github.com/undefinedlabs/ios-agent.git"
-    pod 'Codescope/CocoaLumberjack', :git => "https://github.com/undefinedlabs/ios-agent.git"
+    pod 'CodeScope'
+    pod 'CodeScope/CocoaLumberjack'
   end
 
   target 'DemoSwiftUITests' do
     inherit! :search_paths
-    pod 'Codescope', :git => "https://github.com/undefinedlabs/ios-agent.git"
-    pod 'Codescope/CocoaLumberjack', :git => "https://github.com/undefinedlabs/ios-agent.git"
+    pod 'CodeScope'
+    pod 'CodeScope/CocoaLumberjack'
   end
 
 end

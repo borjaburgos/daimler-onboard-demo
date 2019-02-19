@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_Codescope : NSObject
+@interface PodsDummy_CodeScope : NSObject
 @end
-@implementation PodsDummy_Codescope
+@implementation PodsDummy_CodeScope
 @end

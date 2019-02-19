@@ -3,17 +3,17 @@ PODS:
   - CocoaLumberjack/Default (3.4.2)
   - CocoaLumberjack/Swift (3.4.2):
     - CocoaLumberjack/Default
-  - Codescope (0.1.5):
+  - CodeScope (0.1.7):
     - Aspects
-    - Codescope/Lite (= 0.1.5)
+    - CodeScope/Lite (= 0.1.7)
     - KSCrash
     - opentracing
-  - Codescope/CocoaLumberjack (0.1.5):
+  - CodeScope/CocoaLumberjack (0.1.7):
     - Aspects
     - CocoaLumberjack/Swift
     - KSCrash
     - opentracing
-  - Codescope/Lite (0.1.5):
+  - CodeScope/Lite (0.1.7):
     - Aspects
     - KSCrash
     - opentracing
@@ -84,32 +84,24 @@ PODS:
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift
-  - Codescope (from `https://github.com/undefinedlabs/ios-agent.git`)
-  - Codescope/CocoaLumberjack (from `https://github.com/undefinedlabs/ios-agent.git`)
+  - CodeScope
+  - CodeScope/CocoaLumberjack
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Aspects
     - CocoaLumberjack
+    - CodeScope
     - KSCrash
     - opentracing
-
-EXTERNAL SOURCES:
-  Codescope:
-    :git: https://github.com/undefinedlabs/ios-agent.git
-
-CHECKOUT OPTIONS:
-  Codescope:
-    :commit: cdfc5439aeca8561aee14a0aa79198af0488e4da
-    :git: https://github.com/undefinedlabs/ios-agent.git
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
-  Codescope: dbf118fc971a76c6e727e30f834899f62d5a049b
+  CodeScope: e03fc9d36104b41d12cba9f928235d684efce15c
   KSCrash: 5394936f41e5c1ef7b79cf79b30d53299b0c160e
   opentracing: 2c1a1076e2ab26f56189b02dcb1e72cf0b297917
 
-PODFILE CHECKSUM: 288f78014ef368e84eacbf462bb1f7e2dab089f3
+PODFILE CHECKSUM: 56dfa316570ccd7e3de481c6aaddb0bcf6f0e493
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0

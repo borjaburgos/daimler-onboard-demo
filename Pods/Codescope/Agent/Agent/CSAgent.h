@@ -14,7 +14,7 @@
 #import "CSTracer.h"
 #import "CSCocoaLumberjackLogger.h"
 
-#define CSAGENT_VERSION "0.1.0"
+#define CSAGENT_VERSION "0.1.7"
 #if DEBUG
 #define CSLog(fmt, ...) NSLog(@"[CodeScope] " fmt, ##__VA_ARGS__)
 #else

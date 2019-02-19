@@ -304,7 +304,7 @@ static NSString *kBasicTracerBaggagePrefix = @"ot-baggage-";
         @throw [NSError errorWithDomain:CSErrorDomain code:CSRequestTooLargeError userInfo:nil];
     }
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[self.baseURL URLByAppendingPathComponent:@"/agent/ingest"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[self.baseURL URLByAppendingPathComponent:@"/api/agent/ingest"]];
     request.allHTTPHeaderFields = @{
                                     @"Content-Type": @"application/json",
                                     @"X-CodeScope-ApiKey": self.apiKey,

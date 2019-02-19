@@ -24,6 +24,6 @@
 #import "NSData+CSGzip.h"
 #import "NSDate+ISO8601.h"
 
-FOUNDATION_EXPORT double CodescopeVersionNumber;
-FOUNDATION_EXPORT const unsigned char CodescopeVersionString[];
+FOUNDATION_EXPORT double CodeScopeVersionNumber;
+FOUNDATION_EXPORT const unsigned char CodeScopeVersionString[];
 

@@ -1,5 +1,5 @@
-framework module Codescope {
-  umbrella header "Codescope-umbrella.h"
+framework module CodeScope {
+  umbrella header "CodeScope-umbrella.h"
 
   export *
   module * { export * }

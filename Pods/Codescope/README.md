@@ -10,6 +10,7 @@ CodeScope agent for iOS (Objective-C and Swift)
 ```
 target 'MyAppTests' do
   pod 'Codescope'
+  pod 'Codescope/CocoaLumberjack'  # (optional) for CocoaLumberjack support
 end
 ```
 

@@ -1,11 +1,12 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Aspects" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack" "${PODS_CONFIGURATION_BUILD_DIR}/Codescope" "${PODS_CONFIGURATION_BUILD_DIR}/KSCrash" "${PODS_CONFIGURATION_BUILD_DIR}/opentracing"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks" "${PODS_CONFIGURATION_BUILD_DIR}/Aspects" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack" "${PODS_CONFIGURATION_BUILD_DIR}/CodeScope" "${PODS_CONFIGURATION_BUILD_DIR}/KSCrash" "${PODS_CONFIGURATION_BUILD_DIR}/opentracing"
 GCC_ENABLE_CPP_EXCEPTIONS = YES
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Aspects/Aspects.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CodeScope/CodeScope.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/KSCrash/KSCrash.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/opentracing/opentracing.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -DCS_COCOALUMBERJACK_ENABLED -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Aspects/Aspects.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Codescope/Codescope.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/KSCrash/KSCrash.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/opentracing/opentracing.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Aspects" -framework "CocoaLumberjack" -framework "Codescope" -framework "KSCrash" -framework "opentracing"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+OTHER_CFLAGS = $(inherited) -DCS_COCOALUMBERJACK_ENABLED
+OTHER_LDFLAGS = $(inherited) -l"c++" -l"z" -framework "Aspects" -framework "CocoaLumberjack" -framework "CodeScope" -framework "Foundation" -framework "KSCrash" -framework "MessageUI" -framework "SystemConfiguration" -framework "XCTest" -framework "opentracing"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/..
