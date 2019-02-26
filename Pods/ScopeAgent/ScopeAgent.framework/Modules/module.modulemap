@@ -1,0 +1,6 @@
+framework module ScopeAgent {
+  umbrella header "ScopeAgent.h"
+
+  export *
+  module * { export * }
+}

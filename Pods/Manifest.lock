@@ -1,107 +1,16 @@
 PODS:
-  - Aspects (1.4.1)
-  - CocoaLumberjack/Default (3.4.2)
-  - CocoaLumberjack/Swift (3.4.2):
-    - CocoaLumberjack/Default
-  - CodeScope (0.1.7):
-    - Aspects
-    - CodeScope/Lite (= 0.1.7)
-    - KSCrash
-    - opentracing
-  - CodeScope/CocoaLumberjack (0.1.7):
-    - Aspects
-    - CocoaLumberjack/Swift
-    - KSCrash
-    - opentracing
-  - CodeScope/Lite (0.1.7):
-    - Aspects
-    - KSCrash
-    - opentracing
-  - KSCrash (1.15.18):
-    - KSCrash/Installations (= 1.15.18)
-  - KSCrash/Installations (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting
-  - KSCrash/Recording (1.15.18):
-    - KSCrash/Recording/Tools (= 1.15.18)
-  - KSCrash/Recording/Tools (1.15.18)
-  - KSCrash/Reporting (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters (= 1.15.18)
-    - KSCrash/Reporting/MessageUI (= 1.15.18)
-    - KSCrash/Reporting/Sinks (= 1.15.18)
-    - KSCrash/Reporting/Tools (= 1.15.18)
-  - KSCrash/Reporting/Filters (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters/Alert (= 1.15.18)
-    - KSCrash/Reporting/Filters/AppleFmt (= 1.15.18)
-    - KSCrash/Reporting/Filters/Base (= 1.15.18)
-    - KSCrash/Reporting/Filters/Basic (= 1.15.18)
-    - KSCrash/Reporting/Filters/GZip (= 1.15.18)
-    - KSCrash/Reporting/Filters/JSON (= 1.15.18)
-    - KSCrash/Reporting/Filters/Sets (= 1.15.18)
-    - KSCrash/Reporting/Filters/Stringify (= 1.15.18)
-    - KSCrash/Reporting/Filters/Tools (= 1.15.18)
-  - KSCrash/Reporting/Filters/Alert (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters/Base
-  - KSCrash/Reporting/Filters/AppleFmt (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters/Base
-  - KSCrash/Reporting/Filters/Base (1.15.18):
-    - KSCrash/Recording
-  - KSCrash/Reporting/Filters/Basic (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters/Base
-  - KSCrash/Reporting/Filters/GZip (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters/Base
-  - KSCrash/Reporting/Filters/JSON (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters/Base
-  - KSCrash/Reporting/Filters/Sets (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters/AppleFmt
-    - KSCrash/Reporting/Filters/Base
-    - KSCrash/Reporting/Filters/Basic
-    - KSCrash/Reporting/Filters/GZip
-    - KSCrash/Reporting/Filters/JSON
-    - KSCrash/Reporting/Filters/Stringify
-  - KSCrash/Reporting/Filters/Stringify (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters/Base
-  - KSCrash/Reporting/Filters/Tools (1.15.18):
-    - KSCrash/Recording
-  - KSCrash/Reporting/MessageUI (1.15.18):
-    - KSCrash/Recording
-  - KSCrash/Reporting/Sinks (1.15.18):
-    - KSCrash/Recording
-    - KSCrash/Reporting/Filters
-    - KSCrash/Reporting/Tools
-  - KSCrash/Reporting/Tools (1.15.18):
-    - KSCrash/Recording
-  - opentracing (0.5.0)
+  - ScopeAgent (0.1.11)
 
 DEPENDENCIES:
-  - CocoaLumberjack/Swift
-  - CodeScope
-  - CodeScope/CocoaLumberjack
+  - ScopeAgent
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Aspects
-    - CocoaLumberjack
-    - CodeScope
-    - KSCrash
-    - opentracing
+    - ScopeAgent
 
 SPEC CHECKSUMS:
-  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
-  CodeScope: e03fc9d36104b41d12cba9f928235d684efce15c
-  KSCrash: 5394936f41e5c1ef7b79cf79b30d53299b0c160e
-  opentracing: 2c1a1076e2ab26f56189b02dcb1e72cf0b297917
+  ScopeAgent: a370e4df0dc555633cb99449be71fbd1f46690b0
 
-PODFILE CHECKSUM: 56dfa316570ccd7e3de481c6aaddb0bcf6f0e493
+PODFILE CHECKSUM: 0f573251217d392e2a8508ecdf76cba21135a637
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.6.1

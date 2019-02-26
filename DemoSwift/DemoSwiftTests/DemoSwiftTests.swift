@@ -8,9 +8,9 @@
 
 import XCTest
 import os.log
-import CocoaLumberjack
+//import CocoaLumberjack
 
-let ddloglevel = DDLogLevel.debug;
+//let ddloglevel = DDLogLevel.debug;
 
 @testable import DemoSwift
 
@@ -36,7 +36,7 @@ class DemoSwiftTests: XCTestCase {
     }
     
     func testLogging() {
-        DDLogDebug("Hello world!");
+//        DDLogDebug("Hello world!");
         NSLog("Hello %@", "world!");
         os_log("Hello %@", "world!");
     }

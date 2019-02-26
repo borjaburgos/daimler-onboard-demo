@@ -1,6 +1,0 @@
-framework module CodeScope {
-  umbrella header "CodeScope-umbrella.h"
-
-  export *
-  module * { export * }
-}
