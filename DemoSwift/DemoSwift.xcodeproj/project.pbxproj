@@ -305,7 +305,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DemoSwiftUITests/Pods-DemoSwiftUITests-frameworks.sh",
+				"${SRCROOT}/../Pods/Target Support Files/Pods-DemoSwiftUITests/Pods-DemoSwiftUITests-frameworks.sh",
 				"${PODS_ROOT}/ScopeAgent/ScopeAgent.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -316,7 +316,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoSwiftUITests/Pods-DemoSwiftUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DemoSwiftUITests/Pods-DemoSwiftUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		65ABB78DD7649811A7EEA63B /* [CP] Check Pods Manifest.lock */ = {
@@ -393,7 +393,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests-frameworks.sh",
+				"${SRCROOT}/../Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests-frameworks.sh",
 				"${PODS_ROOT}/ScopeAgent/ScopeAgent.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -404,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

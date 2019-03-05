@@ -1,5 +1,5 @@
 PODS:
-  - ScopeAgent (0.1.11)
+  - ScopeAgent (0.1.12)
 
 DEPENDENCIES:
   - ScopeAgent
@@ -9,8 +9,8 @@ SPEC REPOS:
     - ScopeAgent
 
 SPEC CHECKSUMS:
-  ScopeAgent: a370e4df0dc555633cb99449be71fbd1f46690b0
+  ScopeAgent: 0570e421bb864eb5b604fdb33aae895a12b269f6
 
-PODFILE CHECKSUM: 0f573251217d392e2a8508ecdf76cba21135a637
+PODFILE CHECKSUM: d5afcf9b33e6526c3fb4295d3bb8ff8d366dfd6b
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.5.3
