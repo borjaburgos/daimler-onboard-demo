@@ -8,6 +8,7 @@
 
 import XCTest
 import os.log
+import Alamofire
 
 @testable import DemoSwift
 
@@ -52,6 +53,22 @@ class DemoSwiftTests: XCTestCase {
                 print("Error: \(error.localizedDescription)")
             }
             task.cancel()
+        }
+    }
+    
+    func testAlamofire() {
+        
+        let url = URL(string: "http://httpbin.org/get")!
+        let expec = expectation(description: "GET \(url)")
+        Alamofire.request(url, parameters: ["foo": "bar"])
+            .response { response in
+                expec.fulfill()
+        }
+        
+        waitForExpectations(timeout: 30) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
         }
         
     }
