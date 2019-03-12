@@ -4,3 +4,8 @@ framework module ScopeAgent {
   export *
   module * { export * }
 }
+
+module ScopeAgent.Swift {
+    header "ScopeAgent-Swift.h"
+    requires objc
+}
