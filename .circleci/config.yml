@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    macos:
+      xcode: "10.1.0"
+    steps:
+      - checkout
+      - run:
+          name: Run tests
+          command: xcodebuild -scheme DemoSwift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone XR,OS=12.1' SYMROOT=$(PWD)/build test

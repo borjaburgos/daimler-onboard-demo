@@ -71,17 +71,17 @@
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "SCOPE_COMMIT_SHA"
-            value = "$(SCOPE_COMMIT_SHA)"
+            value = "$(GIT_COMMIT)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "SCOPE_REPOSITORY"
-            value = "$(SCOPE_REPOSITORY)"
+            value = "$(GIT_URL)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "SCOPE_SOURCE_ROOT"
-            value = "$(SCOPE_SOURCE_ROOT)"
+            value = "$(WORKSPACE)"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
