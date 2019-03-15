@@ -11,5 +11,5 @@ FOUNDATION_EXPORT double ScopeAgentVersionNumber;
 FOUNDATION_EXPORT const unsigned char ScopeAgentVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ScopeAgent/PublicHeader.h>
-
-
+#import <ScopeAgent/CSTags.h>
+#import <ScopeAgent/CSAgent.h>

@@ -1,4 +1,0 @@
-module ScopeAgent_Private {
-    export *
-    
-}

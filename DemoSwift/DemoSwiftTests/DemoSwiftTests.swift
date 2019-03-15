@@ -79,17 +79,34 @@ class DemoSwiftTests: XCTestCase {
         
     }
     
-    func testCustomAppLog() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.customLog()
+    func testCustomAppLogWithScopeAgent() {
+        ScopeAgentTester.testScopeAgentLog()
     }
     
-    func testCustomNetworkAndLog() {
+    func testCustomNetworkAndLogWithScopeAgent() {
+        
+        let expec = expectation(description: "testCustomNetworkAndLog")
+        
+        ScopeAgentTester.customNetworkAndLog {
+            expec.fulfill()
+        }
+        
+        waitForExpectations(timeout: 30) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func testCustomAppLogWithScopeAgentClient() {
+        ScopeAgentClientTester.testScopeAgentLog()
+    }
+    
+    func testCustomNetworkAndLogWithScopeAgentClient() {
         
         let expec = expectation(description: "testCustomNetworkAndLog")
 
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.customNetworkAndLog {
+        ScopeAgentClientTester.customNetworkAndLog {
             expec.fulfill()
         }
         

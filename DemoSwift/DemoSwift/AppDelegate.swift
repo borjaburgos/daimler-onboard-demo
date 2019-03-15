@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ScopeAgentClient
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -41,24 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-    func customLog() {
-        SALogger.log(.debug, "HELLO FROM APP")
-    }
-
-    func customNetworkAndLog(callback:@escaping ()->Void) {
-        
-        let url = URL(string: "http://httpbin.org/ip")!
-        let task = URLSession.shared.dataTask(with: url) { data,response,error  in
-            if let data = data {
-                let string = String(data: data, encoding: .utf8)
-                SALogger.log(.debug, string)
-            }
-            callback()
-        }
-        task.resume()
-        
     }
 }
 

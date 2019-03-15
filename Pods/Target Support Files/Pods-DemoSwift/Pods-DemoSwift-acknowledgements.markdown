@@ -24,6 +24,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## ScopeAgent
+
+Copyright (c) 2018 Undefined Labs, Inc.  All rights reserved.
+
+
 ## ScopeAgentClient
 
 Copyright (c) 2018 Undefined Labs, Inc.  All rights reserved.
