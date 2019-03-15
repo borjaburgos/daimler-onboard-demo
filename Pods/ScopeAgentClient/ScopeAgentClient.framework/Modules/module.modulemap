@@ -1,0 +1,11 @@
+framework module ScopeAgentClient {
+  umbrella header "ScopeAgentClient.h"
+
+  export *
+  module * { export * }
+}
+
+module ScopeAgentClient.Swift {
+    header "ScopeAgentClient-Swift.h"
+    requires objc
+}

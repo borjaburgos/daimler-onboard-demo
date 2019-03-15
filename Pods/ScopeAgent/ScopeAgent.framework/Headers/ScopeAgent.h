@@ -1,8 +1,4 @@
 //
-//  ScopeAgent.h
-//  ScopeAgent
-//
-//  Created by Ignacio Bonafonte on 22/02/2019.
 //  Copyright © 2019 Undefined Labs. All rights reserved.
 //
 

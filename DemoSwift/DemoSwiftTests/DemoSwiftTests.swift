@@ -8,6 +8,7 @@
 
 import XCTest
 import os.log
+import ScopeAgentClient
 import Alamofire
 
 @testable import DemoSwift
@@ -55,14 +56,41 @@ class DemoSwiftTests: XCTestCase {
             task.cancel()
         }
     }
-    
+
     func testAlamofire() {
-        
+
         let url = URL(string: "http://httpbin.org/get")!
         let expec = expectation(description: "GET \(url)")
         Alamofire.request(url, parameters: ["foo": "bar"])
             .response { response in
                 expec.fulfill()
+        }
+
+        waitForExpectations(timeout: 30) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+
+    }
+
+    func testCustomLog() {
+        SALogger.log(.debug, "HELLO FROM TEST")
+        
+    }
+    
+    func testCustomAppLog() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.customLog()
+    }
+    
+    func testCustomNetworkAndLog() {
+        
+        let expec = expectation(description: "testCustomNetworkAndLog")
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.customNetworkAndLog {
+            expec.fulfill()
         }
         
         waitForExpectations(timeout: 30) { error in
@@ -70,7 +98,6 @@ class DemoSwiftTests: XCTestCase {
                 print("Error: \(error.localizedDescription)")
             }
         }
-        
     }
-
+    
 }
