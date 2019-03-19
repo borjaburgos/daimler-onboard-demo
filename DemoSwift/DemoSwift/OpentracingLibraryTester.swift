@@ -10,8 +10,9 @@ class OpentracingLibraryTester {
         
         let span = tracer.startSpan("CustomSpanFromApp")
         sleep(1)
-        _ = tracer.startSpan("Child Span from app", childOf: span.context())
+        let childSpan = tracer.startSpan("Child Span from app", childOf: span.context())
         sleep(1)
+        childSpan.finish()
         span.finish()
     }
 }
