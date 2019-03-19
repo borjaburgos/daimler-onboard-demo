@@ -117,4 +117,7 @@ class DemoSwiftTests: XCTestCase {
         }
     }
     
+    func testAddSpansFromAppUsingOpentracing() {
+        OpentracingLibraryTester.addSpansFromAppUsingOpentracing()  
+    }
 }
