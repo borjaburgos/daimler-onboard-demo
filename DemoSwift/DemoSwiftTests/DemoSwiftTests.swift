@@ -26,9 +26,9 @@ class DemoSwiftTests: XCTestCase {
         NSLog("Hello %@", "world!");
     }
     
-//    func testCrash() {
-//        [][0];
-//    }
+    func testCrash() {
+        [][0];
+    }
     
     func testException() {
         NSException.init(name: NSExceptionName.init("Name"), reason: "Reason", userInfo: ["Key": "Value"]).raise();
