@@ -156,11 +156,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${PODS_ROOT}/ScopeAgent/ScopeAgent.framework"
   install_framework "${PODS_ROOT}/ScopeAgentClient/ScopeAgentClient.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/opentracing/opentracing.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${PODS_ROOT}/ScopeAgent/ScopeAgent.framework"
   install_framework "${PODS_ROOT}/ScopeAgentClient/ScopeAgentClient.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/opentracing/opentracing.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
