@@ -1,14 +1,14 @@
 PODS:
   - Alamofire (4.8.1)
   - opentracing (0.5.0)
-  - ScopeAgent (0.1.17-beta.7):
+  - ScopeAgent (0.1.17):
     - opentracing (~> 0.5)
-  - ScopeAgentClient (0.1.17-beta.7)
+  - ScopeAgentClient (0.1.17)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - ScopeAgent (~> 0.1.17-beta)
-  - ScopeAgentClient (~> 0.1.17-beta)
+  - ScopeAgent (~> 0.1.17)
+  - ScopeAgentClient (~> 0.1.17)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -20,9 +20,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   opentracing: 2c1a1076e2ab26f56189b02dcb1e72cf0b297917
-  ScopeAgent: 382f5f89dc373ae2b70ca021c3112c6f8146da39
-  ScopeAgentClient: b384d8bb58f2e4b76d784dacb1e062c34c6485ef
+  ScopeAgent: 0b11ebbb578b654066e245ad2d14c5a1a7571161
+  ScopeAgentClient: 0e03b4e0f3c4ea289800ada162e0f3a2b1484381
 
-PODFILE CHECKSUM: 2f457d9509fe682a0431ee13af80be56b0ddd95f
+PODFILE CHECKSUM: 2dcb7e2e369f55159dbbc5eb98c44db74630e780
 
 COCOAPODS: 1.6.1
