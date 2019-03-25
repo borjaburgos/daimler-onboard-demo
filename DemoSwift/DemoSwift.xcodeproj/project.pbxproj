@@ -10,6 +10,7 @@
 		638D81C287693D3449980425 /* Pods_DemoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA561A742F1651B5938F7 /* Pods_DemoSwiftTests.framework */; };
 		665A013F223BCF4A0042E118 /* ScopeAgentClientTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A013E223BCF4A0042E118 /* ScopeAgentClientTester.swift */; };
 		665A0141223BE39E0042E118 /* ScopeAgentTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A0140223BE3980042E118 /* ScopeAgentTester.swift */; };
+		66B027D72248DF30000EDFDA /* OpentracingLibraryTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B027D62248DF2C000EDFDA /* OpentracingLibraryTester.swift */; };
 		A103B887D2BF1C63B0705487 /* Pods_DemoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF003F8A6A2155D46D2FF4C /* Pods_DemoSwift.framework */; };
 		A9D7343BCD12C7AF468EF2D8 /* Pods_DemoSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6789D775927B8705E9A3E5 /* Pods_DemoSwiftUITests.framework */; };
 		CCEB3C8621742455002C26C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB3C8521742455002C26C5 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		637B17771DDEB7A2A27B28F0 /* Pods-DemoSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwiftTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		665A013E223BCF4A0042E118 /* ScopeAgentClientTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeAgentClientTester.swift; sourceTree = "<group>"; };
 		665A0140223BE3980042E118 /* ScopeAgentTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeAgentTester.swift; sourceTree = "<group>"; };
+		66B027D62248DF2C000EDFDA /* OpentracingLibraryTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpentracingLibraryTester.swift; sourceTree = "<group>"; };
 		6F6789D775927B8705E9A3E5 /* Pods_DemoSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF003F8A6A2155D46D2FF4C /* Pods_DemoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3947F564CF96914259415BC /* Pods-DemoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwift.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DemoSwift/Pods-DemoSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		CCEB3C8421742455002C26C5 /* DemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				66B027D62248DF2C000EDFDA /* OpentracingLibraryTester.swift */,
 				CCEB3C8521742455002C26C5 /* AppDelegate.swift */,
 				665A0140223BE3980042E118 /* ScopeAgentTester.swift */,
 				665A013E223BCF4A0042E118 /* ScopeAgentClientTester.swift */,
@@ -403,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B027D72248DF30000EDFDA /* OpentracingLibraryTester.swift in Sources */,
 				CCEB3C8821742455002C26C5 /* ViewController.swift in Sources */,
 				665A013F223BCF4A0042E118 /* ScopeAgentClientTester.swift in Sources */,
 				665A0141223BE39E0042E118 /* ScopeAgentTester.swift in Sources */,
