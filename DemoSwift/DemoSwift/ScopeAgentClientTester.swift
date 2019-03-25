@@ -12,7 +12,7 @@ import ScopeAgentClient
 class ScopeAgentClientTester {
     
     class func testScopeAgentLog() {
-        SALogger.log(.debug, "HELLO FROM APP USING SCOPEAGENTCLIENT")
+        SALogger.log("HELLO FROM APP USING SCOPEAGENTCLIENT", .debug)
     }
     
     class func customNetworkAndLog(callback:@escaping ()->Void) {
@@ -21,7 +21,7 @@ class ScopeAgentClientTester {
         let task = URLSession.shared.dataTask(with: url) { data,response,error  in
             if let data = data {
                 let string = String(data: data, encoding: .utf8)
-                SALogger.log(.debug, string)
+                SALogger.log(string, .debug)
             }
             callback()
         }

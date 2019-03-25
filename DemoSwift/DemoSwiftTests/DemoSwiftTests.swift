@@ -75,7 +75,7 @@ class DemoSwiftTests: XCTestCase {
     }
 
     func testCustomLog() {
-        SALogger.log(.debug, "HELLO FROM TEST")
+        SALogger.log("HELLO FROM TEST", .debug)
         
     }
     
