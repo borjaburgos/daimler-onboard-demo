@@ -9,6 +9,7 @@
 import XCTest
 import os.log
 import ScopeAgentClient
+import ScopeAgent
 import Alamofire
 
 @testable import DemoSwift
@@ -75,7 +76,7 @@ class DemoSwiftTests: XCTestCase {
     }
 
     func testCustomLog() {
-        SALogger.log("HELLO FROM TEST", .debug)
+        ScopeAgentClient.SALogger.log("HELLO FROM TEST", .debug)
         
     }
     
@@ -118,6 +119,35 @@ class DemoSwiftTests: XCTestCase {
     }
     
     func testAddSpansFromAppUsingOpentracing() {
-        OpentracingLibraryTester.addSpansFromAppUsingOpentracing()  
+        OpentracingLibraryTester.addSpansFromAppUsingOpentracing()
+    }
+    
+    func testNetworkCrashOnResponse() {
+        
+        let expec = expectation(description: "testCustomNetworkAndLog")
+        
+        ScopeAgentTester.customNetworkAndLog {
+            expec.fulfill()
+            let a = NSMutableArray()
+            a.removeObjects(in: NSRange(location: NSNotFound, length: 0-NSNotFound))
+            
+        }
+        
+        waitForExpectations(timeout: 30) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func testNoWaitResponseNetworkCrash() {
+        
+        let expec = expectation(description: "testCustomNetworkAndLog")
+        
+        ScopeAgentTester.customNetworkAndLog {
+            expec.fulfill()
+            let a = NSMutableArray()
+            a.removeObjects(in: NSRange(location: NSNotFound, length: 0-NSNotFound))
+        }
     }
 }
