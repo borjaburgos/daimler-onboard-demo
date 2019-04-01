@@ -140,7 +140,10 @@ class DemoSwiftTests: XCTestCase {
         }
     }
     
-    func testNoWaitResponseNetworkCrash() {
+    func testCustomLogAndNetworkCrashInThFuture() {
+        
+        ScopeAgent.SALogger.log("This test should fail in the future", .info)
+
         ScopeAgentTester.customNetworkAndLog {
             let a = NSMutableArray()
             a.removeObjects(in: NSRange(location: NSNotFound, length: 0-NSNotFound))
