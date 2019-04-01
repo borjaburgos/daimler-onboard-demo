@@ -140,7 +140,7 @@ class DemoSwiftTests: XCTestCase {
         }
     }
     
-    func testCustomLogAndNetworkCrashInThFuture() {
+    func testCustomLogAndNetworkCrashInTheFuture() {
         
         ScopeAgent.SALogger.log("This test should fail in the future", .info)
 

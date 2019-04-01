@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-#define CSAGENT_VERSION "0.1.18"
+#define CSAGENT_VERSION "0.1.17"
 
 #define CSLog(fmt, ...) NSLog(@"[Scope] " fmt, ##__VA_ARGS__)
 
