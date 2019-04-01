@@ -122,7 +122,7 @@ class DemoSwiftTests: XCTestCase {
         OpentracingLibraryTester.addSpansFromAppUsingOpentracing()
     }
     
-    func testNetworkCrashOnResponse() {
+    func testCustomNetworkCrashOnResponse() {
         
         let expec = expectation(description: "testCustomNetworkAndLog")
         
@@ -141,11 +141,7 @@ class DemoSwiftTests: XCTestCase {
     }
     
     func testNoWaitResponseNetworkCrash() {
-        
-        let expec = expectation(description: "testCustomNetworkAndLog")
-        
         ScopeAgentTester.customNetworkAndLog {
-            expec.fulfill()
             let a = NSMutableArray()
             a.removeObjects(in: NSRange(location: NSNotFound, length: 0-NSNotFound))
         }
