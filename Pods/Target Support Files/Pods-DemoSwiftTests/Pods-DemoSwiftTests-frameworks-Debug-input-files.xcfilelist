@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-DemoSwiftTests/Pods-DemoSwiftTests-frameworks.sh
+${PODS_ROOT}/ScopeAgent/ScopeAgent.framework
+${BUILT_PRODUCTS_DIR}/opentracing/opentracing.framework
