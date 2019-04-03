@@ -7,7 +7,8 @@ target 'DemoSwift' do
 
   target 'DemoSwiftTests' do
     inherit! :search_paths
-  end
+    pod 'ScopeAgent' 
+ end
 
   target 'DemoSwiftUITests' do
     inherit! :search_paths

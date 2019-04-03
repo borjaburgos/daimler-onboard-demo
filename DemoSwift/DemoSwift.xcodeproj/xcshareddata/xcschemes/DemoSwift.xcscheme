@@ -58,6 +58,33 @@
             ReferencedContainer = "container:DemoSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "SCOPE_API_ENDPOINT&#9;"
+            value = "$(SCOPE_API_ENDPOINT)&#10;"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_COMMIT_SHA&#9;"
+            value = "$(CIRCLE_SHA1)&#10;"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_REPOSITORY"
+            value = "$(CIRCLE_REPOSITORY_URL)&#10;"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_SOURCE_ROOT"
+            value = "$(CIRCLE_WORKING_DIRECTORY)&#10;"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_APIKEY"
+            value = "$(SCOPE_APIKEY)&#10;"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
