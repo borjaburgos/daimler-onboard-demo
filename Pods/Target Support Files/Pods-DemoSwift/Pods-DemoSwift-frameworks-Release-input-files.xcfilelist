@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-DemoSwift/Pods-DemoSwift-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${PODS_ROOT}/ScopeAgent/ScopeAgent.framework
+${BUILT_PRODUCTS_DIR}/opentracing/opentracing.framework
