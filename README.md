@@ -1,1 +1,1 @@
-# demo-swift
+# daimler-onboarding-demo
